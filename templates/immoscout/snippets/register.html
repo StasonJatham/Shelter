@@ -1,0 +1,8 @@
+{% load get_register_form from immoscout %}
+{% get_register_form request.user as data_form %}
+<p>Contiue without an accont</p>
+<form method="POST" id='register_form' action="{% url 'immoscout:user_data_create' %}">{% csrf_token %}
+    {{data_form}}
+    <button type="subnmit" id="success_check_reqister" class="btn btn-primary">save</button>
+</form>
+{% include 'utils/ajax_form.html' with id='register_form' success='success_check_reqister' %}

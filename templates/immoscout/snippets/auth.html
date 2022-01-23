@@ -1,0 +1,10 @@
+<div class="row">
+    <div id="connect" class="col-md-6">
+        <p>Let your bot log into your Immoscout account to use some features like Immoscout Premium</p>
+         {{ login_form }}
+    </div>
+    <div id="register" class="col-md-6" style="display: none;">
+        <p>Fill your your contact information</p>
+     {% include 'immoscout/snippets/register.html' with data_form=data_form %}
+    </div>
+</div>
